@@ -1,21 +1,23 @@
 int timer = 0;
-int angl = 1;
+int angl = 240  ;
 boolean stop = false;
 public void setup(){
   size(800,800);
 }
 public void draw(){
-  if(timer > 1){
+  if(timer >= 1){
     if(stop == false){
       angl++;
     }
     background(0);
     timer = 0;
-    println(angl);
+    textAlign(CENTER, CENTER);
+    textSize(24);
+    text(angl+"°", 50, 30);
   }else{
     timer++;
  }
-  fractal(500/2,500/2,200, angl*PI/180);
+  fractal(450/2,450/2,200, angl*PI/180);
 }
 public void fractal(float x, float y, float size, float angle){
   rectMode(CENTER);

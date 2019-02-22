@@ -1,6 +1,6 @@
 int timer = 0;
-int angl = -100;
-boolean stop = false;
+int angl = 0;
+boolean stop = true;
 public void setup(){
   size(800,800);
 }

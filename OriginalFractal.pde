@@ -1,5 +1,5 @@
 int timer = 0;
-int angl = 240  ;
+int angl = -100;
 boolean stop = false;
 public void setup(){
   size(800,800);
@@ -8,6 +8,9 @@ public void draw(){
   if(timer >= 1){
     if(stop == false){
       angl++;
+      if(angl == 360){
+        angl = 0;
+      }
     }
     background(0);
     timer = 0;
